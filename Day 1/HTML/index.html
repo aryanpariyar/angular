@@ -26,31 +26,32 @@
     <!-- => paragraph in HTML -->
     <p>This is the paragraph tag in html.</p>
 
-    <!-- => htmls formating elements 
-        <b></b>              Bold text
-        <strong></strong>   Important Text
-        <i></i>             Italic Text
-        <em></em>           Empified Text
-        <small></small>     Small text
-        <del></del>         Delete TExt
-        <sub></sub>         Sub Script text
-        <sup></sup>         Super Script Text -->
-
-    <p>I am <b> <mark>  Aryan Pariyar</mark></b>, I am <del>Front-end</del><i>Full Stack</i> <strong>Developer</strong>.</p><br>
-<br>
-<button><a href="">Hello</a></button>
-<br>
-   <label for="">  H <sub>2</sub> O</label> <!-- sub script --> <br>
-       <label for="">  X <sup>2</sup> + Y <sup>2</sup></label> <!-- Super script--> <br>
-    <!-- link tag in html -->
+    <!-- => htmls formating elements -->
+    <!-- <b></b>              Bold text
+    <strong></strong>   Important Text
+    <i></i>             Italic Text
+    <em></em>           Empified Text
+    <mark> </mark>      To Highlight the text.
+    <small></small>     Small text
+    <del></del>         Delete TExt
+    <sub></sub>         Sub Script text
+    <sup></sup>         Super Script Text -->
+        <p>Hello I am <strong>Aryan Pariyar</strong>, I am a <del>frontend</del> <u>Full Stack</u> <i>developer</i>.</p>
 
 
-    <button><center><a href="https://www.facebook.com/aryanpariyarofficial" target="-blank" title="Click to open Facebook" > Facebook</a></center></button>
-    <button><a href="https://www.instagram.com/aryanpariyarofficial" target="-blank" title="Click to open Instagram"> Instagram</a></button>
-    <button><a href="https://www.youtube.com/edutechofficial" target="-blank" title="Click to open Youtube"> Youtube</a></button>
+        <br> <br>
+       <div class="container">
+        H <sub>2</sub> O <br> <br>
+        X <sup>2</sup>  + Y <sup>2</sup>
+       </div>
 
-  <!-- Images in Html -->
+       <br> 
+       <button> <a href="https://www.facebook.com/aryanpariyarofficial/" target="_blank" title="Click here to visit my profile.">Facebook</a></button>
 <br> <br>
+
+
+<a href=""></a>
+<br><br>
   <img src="https://scontent.fkep2-1.fna.fbcdn.net/v/t1.6435-9/96266492_1169450913403398_4563254253505740800_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=bMuH-v_qCiYAX9mP1nQ&tn=3NM-SlrsnGyPVhPw&_nc_ht=scontent.fkep2-1.fna&oh=fd84554063a1a1d0d034891339f84b15&oe=60FC97A6" alt="my image" title="This image belongs to Aryan.">
   <br> <br>
 
@@ -92,8 +93,58 @@
 <br> <br> <br>
 <!-- List in Htmls -->
 <!-- There are two type of list in htmsl -->
+<!-- 1. Unordered List -->
+<div class="container">
 
-<br> <br> <br>
+    <ul type="square">
+        <li>Name1</li>
+        <li>Name2</li>
+        <li>Name3</li>
+        <li>Name4</li>
+    </ul>
+    <!-- 2. Ordered list -->
+    <ol type="I" start="">
+        <li>Aryan</li>
+        <li>Rohan</li>
+        <li>Shyam</li>
+        <li>Hari</li>
+    </ol><br> <br> <br>
+    <!-- This Listing has attribute of type in Unordered list there is disc,circle and square, and in Ordered list there is 
+    1,A,a, I -->
+    <br> <br> <br>
+
+    <br> <br> <br>
+</div>
+<div class="formDiv">
+    <!-- => Forms in HTML  -->
+ <form action="">
+    <label for="">Username:</label>
+    <input type="text" name="name" placeholder="Enter your username..."> <br> <br>
+    <label for="">Password:</label>
+    <input type="password" name="password" placeholder="Enter your password..."> <br> <br>
+    <label for="">Email:</label>
+    <input type="email" name="email" placeholder="Enter your email..."><br> <br>
+    <label for="">Phone:</label>
+    <input type="number" name="phone" placeholder="Enter your phone..."><br> <br>
+    <select name="" id="">
+        <option value="">Select any one</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Angular">Angular</option>
+        <option value="Laravel">Laravel</option>
+        <option value="Nodejs">Nodejs</option>
+
+    </select><br> <br>
+    <textarea name="" id="" cols="30" rows="4" placeholder="Write something here..."></textarea> <br> <br>
+    <p>Select Your Gender</p>
+    <input type="radio" name="gender">Male
+    <input type="radio" name="gender">Female <br> <br>
+    
+    <p>please read the all <a href="https://edutech442.blogspot.com/p/terms-and-condition.html ">conditions</a> carefully</p>
+
+    <input type="checkbox"> Yes, I read it.
+<br><br><br>    <input type="submit" value="SUBMIT" style="font-size: 20px; padding: 4px; height: 40px; cursor: pointer;">
+</form>
+</div>
 </body>
 </html>
 

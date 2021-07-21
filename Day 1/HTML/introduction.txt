@@ -43,3 +43,133 @@
     eg. <h1> </h1>  => this is tag , but
     html elements is the tag having data inside . 
     eg, <h1> Namaste World !! </h1>
+
+    => Heading in HTML:
+    For heading there are 6 tags in Html
+    AS:  <h1></h1>
+        <h2></h2>
+        <h3></h3>
+        <h4></h4>
+        <h5></h5>
+        <h6></h6>
+        These heading are different in size as h1 is the largest in size.
+        and h2 is smaller than h1 and h3 is smaller than h2 and soon on.
+
+    =>Paragraph in HTML
+    In HTML we write paragraph by p tag 
+    as: <p> </p>
+    =>Text formatting in HTML:
+    For formating a text in html we have several tags.
+    as: <b></b>              Bold text
+        <strong></strong>   Important Text
+        <i></i>             Italic Text
+        <em></em>           Empified Text
+        <mark> </mark>      To Highlight the text.
+        <small></small>     Small text
+        <del></del>         Delete TExt
+        <sub></sub>         Sub Script text
+        <sup></sup>         Super Script Text
+    => Style in HTML :
+    We do style part in CSS but by the help of HTML also 
+    we can do some styles by the usings of attributes of html.
+    as: 
+    For change the height of image we use hight = hightofrequiredsize and width =
+    for changing the color color = color value. etc
+    =>Comment In HTML 
+    For commenting in HTML we use 
+    <!-- some data -->
+    =>Links and Hyper Linking in HTML
+    For Linking we use anchor tag as 
+    <a a href = "required Link" > </a>
+    <a a href = "www.facebook.com" > Facebook </a>
+    
+    =>Images in HTML
+    For images we have to use 
+    Img tag in html
+    as: 
+        < img src = "link of image">
+        this is the open tag and hasnot any closing tag and we have other single open tags also there
+        as break tag as: 
+        <br>
+
+    =>Tables in HTML:
+    For tabel we have to use table tag in html as 
+    <table> </table>
+    inside table we use table row (<tr> </tr>) and inside that table head (<th> </th>) and table data(<td> </td>)
+    for eg: 
+    <table>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+    In table : we use some attributes as border="1" cellspacing = "0" cellspadding = "40"
+    : To set border; we use border="1"
+    : to remove cellspacing we use cellspacing = "0"
+    : to give cell padding we use cellspadding = "40"
+
+    =>lists in HTML
+    There are two type of list as : 
+    1. <!-- 1. Unordered List -->
+<div class="container">
+
+    <ul type="square">
+        <li>Name1</li>
+        <li>Name2</li>
+        <li>Name3</li>
+        <li>Name4</li>
+    </ul>
+    <!-- 2. Ordered list -->
+    <ol type="I" start="">
+        <li>Aryan</li>
+        <li>Rohan</li>
+        <li>Shyam</li>
+        <li>Hari</li>
+    </ol><br> <br> <br>
+    <!-- This Listing has attribute of type in Unordered list there is disc,circle and square, and in Ordered list there is 
+    1,A,a, I -->
+    =Forms in HTML:
+    IN form we can use many tags and attributes : 
+    first use form tag for form
+    <form> </form>
+    inside This we use various tags and attributes as :
+
+ <form action="">
+    <label for="">Username:</label>
+    <input type="text" name="name" placeholder="Enter your username..."> <br> <br>
+    <label for="">Password:</label>
+    <input type="password" name="password" placeholder="Enter your password..."> <br> <br>
+    <label for="">Email:</label>
+    <input type="email" name="email" placeholder="Enter your email..."><br> <br>
+    <label for="">Phone:</label>
+    <input type="number" name="phone" placeholder="Enter your phone..."><br> <br>
+    <select name="" id="">
+        <option value="">Select any one</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Angular">Angular</option>
+        <option value="Laravel">Laravel</option>
+        <option value="Nodejs">Nodejs</option>
+
+    </select><br> <br>
+    <textarea name="" id="" cols="30" rows="4" placeholder="Write something here..."></textarea> <br> <br>
+    <p>Select Your Gender</p>
+    <input type="radio" name="gender">Male
+    <input type="radio" name="gender">Female <br> <br>
+    
+    <p>please read the all <a href="https://edutech442.blogspot.com/p/terms-and-condition.html ">conditions</a> carefully</p>
+
+    <input type="checkbox"> Yes, I read it.
+<br><br><br>    <input type="submit" value="SUBMIT" style="font-size: 20px; padding: 4px; height: 40px; cursor: pointer;">
+</form>
+
+In Above example some important attributes are present 
+1. name is used when we want to fetch data or store data in database and more.
+2. placeholder is for to show the some text/number to the user till he/she type something on it.
+3. type: IN type attribute we have different different value like text, number, radio,image,etc.
