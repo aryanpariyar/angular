@@ -1,0 +1,45 @@
+#What is HTML?
+=> HTML is standard markup language for creating web pages.
+    HTML stands for Hyper Text Markup Language.
+    HTML describes the structure of webpage,consistes a series of elements
+    and elements tell the browser how to display the content.
+    HTML elements are represented by tags.
+
+
+    The extension of the html file is always .html
+
+        syntax
+
+        <html>
+            <head>
+                <title>  // here is the title of our file       </title>
+            </head>
+            <body>
+                 All the display contnet should be type here.
+            </body>
+        </html>
+
+        There are alots of tags in html along that some of them are
+        main tag is 
+        HTML   <html></html>
+        head   <head></head>
+        title   <title></title>
+        body all the content is located here, <body></body>
+        heading There are 6 tags for heading for various size.
+        <h1></h1>
+        <h2></h2>
+        <h3></h3>
+        <h4></h4>
+        <h5></h5>
+        <h6></h6>
+        paragraph <p></p>
+        bold      <b></b>
+        italic    <i></i>
+        underline  <u></u>
+        break      <br>
+  
+  #What is Difference Between HTML Tag and HTML Elements.
+  => html tag is the simple tag without data.
+    eg. <h1> </h1>  => this is tag , but
+    html elements is the tag having data inside . 
+    eg, <h1> Namaste World !! </h1>

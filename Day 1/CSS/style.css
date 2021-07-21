@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+     font-family: 'Source Sans Pro', sans-serif;
+   }
+   h2,h3,h4,h5,h6,p,label{
+       margin-left: 50px;
+   }
+   h2{
+       margin-top: 50px;
+   }
+   button{
+       margin: 10px;
+       padding: 5px;
+       align-items: center;
+       text-align: center;
+       text-transform: uppercase;
+   }
+   button a{
+       text-decoration: none;
+       text-align: center;
+   }
+   button a::title{
+      background-color: none;
+   }
+   .title{
+    color: white; 
+    background-color: black;
+     padding: 20px 0;
+      text-align: center;
+     text-transform: capitalize;
+   }
+   img{
+       margin: 50px;
+       height: 500px;
+       width: auto;
+   }
+   table{
+       width: 40%;
+       margin: 100px;
+       text-align: center;
+   }
+   table tr{
+       font-size: 20px;
+       padding: 10px;
+   }
