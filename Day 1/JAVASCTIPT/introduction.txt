@@ -1,0 +1,441 @@
+    =>JavaScript
+        JavaScript is a lightweight, interpreted programming language. It is designed for 
+        creating network-centric applications. It is complimentary to and integrated with 
+        Java. JavaScript is very easy to implement because it is integrated with HTML. 
+        It is open and cross-platform
+    
+    =>Why to Learn Javascript
+        Javascript is a MUST for students and working professionals to become a 
+        great Software Engineer specially when they are working in Web Development Domain. 
+        I will list down some of the key advantages of learning Javascript:
+
+        Javascript is the most popular programming language in the world and that makes it a programmer’s great 
+        choice. Once you learnt Javascript, it helps you developing great front-end as well as back-end softwares
+         using different Javascript based frameworks like jQuery, Node.JS etc.
+
+        Javascript is everywhere, it comes installed on every modern web browser and so to learn Javascript you 
+        really do not need any special environment setup. For example Chrome, Mozilla Firefox , Safari and every
+         browser you know as of today, supports Javascript.
+
+        Javascript helps you create really beautiful and crazy fast websites. You can develop your website with a 
+        console like look and feel and give your users the best Graphical User Experience.
+
+        JavaScript usage has now extended to mobile app development, desktop app development, and game development.
+         This opens many opportunities for you as Javascript Programmer.
+
+        Due to high demand, there is tons of job growth and high pay for those who know JavaScript. You can navigate
+         over to different job sites to see what having JavaScript skills looks like in the job market.
+
+        Great thing about Javascript is that you will find tons of frameworks and Libraries already developed which
+         can be used directly in your software development to reduce your time to market.
+
+        There could be 1000s of good reasons to learn Javascript Programming. But one thing for sure, to learn any 
+        programming language, not only Javascript, you just need to code, and code and finally code until you become 
+        expert.
+
+    => There are many useful Javascript frameworks and libraries available:
+
+        Angular
+        React
+        jQuery
+        Vue.js
+        Ext.js
+        Ember.js
+        Meteor
+        Mithril
+        Node.js
+        Polymer
+        Aurelia
+        Backbone.js
+
+
+    Namaste World program in Javascript
+    console.log("Namaste world!!")
+
+
+    =>How to declear Variabel in JavaScript?
+     Using Var Keyword we can Declare Variable in js eg var a = 5;
+
+Data Types in JS
+ => There are Six(6) Datatypes in JS, That are Primitives.
+  1. Undefined: typeof instance === "undefined";
+  2. Boolean: typeof instance === "boolean";
+  3. Number: typeof instance === "number";
+  4. String: typeof instance === "string";
+  5. BigINt: typeof instance === "bigint";
+  6. Symbol: typeof instance === "symbol";
+
+How to check which DataType of the given Var is?
+
+ => Simple by using typeof operator.
+ console.log(typeof (varName));
+ 
+var myName = "Aryan Pariyar", myAge = 21, myClass = "BSc.CSIT 4th sem";
+console.log(myName);
+console.log(typeof(myName));
+
+console.log(myAge);
+console.log(typeof(myAge));
+
+console.log(myClass);
+console.log(typeof(myClass));
+
+                =>Expressions and Operators
+
+                There are 6 types of operators in JavaScript.
+                1. Assignment Operator=> ( =);
+                2. Arithmetic Operator=> (*, /, +, -, % );
+                3. Comparison Operator => (< > <= >=);
+                4. Logical Operator => || && !!
+                5. String Operator ;
+                Conditional Operator ( ternary Operator);=> (? : ;) 
+                
+
+                        Operator
+                    a    +    b
+                Operand      Operand
+                This Total is Expression;
+
+                1. Arithmetic Operators;
+
+                console.log(2+2);
+                console.log(2-2);
+                console.log(2*2);
+
+
+                                            => Conditional Operators
+
+                                        ( == != > < >= <=)
+                                        A comparision operator compares its operands and returns a logical value based
+                                        On whether the comparision is true.
+
+                                        var a = 10;
+                                        var b = 20;
+
+                                        console.log(a == b);
+                                        console.log(a != b);
+                                        console.log(a > b);
+                                        console.log(a < b);
+                                        console.log(a >= b);
+                                        console.log(a <= b);
+
+=> Logial operators
+// Logical Operators are typically used with boolean (Logial) values; When they are, they 
+// return a boolean value.
+
+// There are Three Logial Operators
+// 1. Logial AND &&
+// If all the value of expressions are true then only AND operator returns true.
+var a = 4;
+var b = 3;
+// console.log(a > b && a > 0); //true 
+// console.log(a > b && a > 5); //false
+
+// 2. Logical OR ||
+// If any one of the expression is true then it will returns true value.
+
+// console.log(a > b || a > 5); //true
+// console.log(a < b || a > 5); //false
+
+
+// 3. Logical NOT !
+console.log(!a < b );
+ //true.
+
+                    => String operator
+                    //  The concatenation operator ( + ) concates two string values together returning
+                    //  another string that is the union of the two operand string that is the union of the 
+                    //  two operand string.
+
+
+                    console.log("Aryan Pariyar");
+                    console.log("Aryan " + "Pariyar");
+
+
+
+=>If Else in JS
+ If else is used when we want one conditon is true and other is false. means
+we the conditon match the if statement is executed otherwise else is executed. we can use nested
+if else also.
+
+var day = "Sunday";
+var day = "Monday";
+var day = "Tuesday";
+if(day == "Sunday"){
+    console.log(day +" is a Holyday.");
+}
+else{
+        console.log(day +" is a Schoolday.");       
+}
+// Find the Area of circle, Rectangle and Square by using if else in JS.
+
+var l = 5, b = 4, r = 3;
+const Pi = 1.314;
+Area = "Square";
+if( Area == "Rectangle")
+    {
+        console.log("The area of " + Area + " is: " + (l * b));
+    }
+else if(Area = "Circle")
+    {
+        console.log("The area of " + Area + " is: " + (Pi * r * r));
+    }
+else if(Area = "Square")
+    {   
+        console.log("The area of " + Area + " is: " + (l**2));
+    }
+else{
+    console.log("Please Enter Valid Data");    
+}
+
+
+
+
+
+                            =>ternary operator
+                            
+                        // The only one opertor which take 3 operands
+
+                        // syntax
+                        num = 50;
+                        console.log((num > 20)  ?  num + " is Greater than 20 : "  : num + " is not Greater than 20: " );
+
+
+ =>Switch Statement:
+// Evaluates an Expression, matching the expression's value to a case claues,
+// and execuate statements associated with that case.
+
+
+
+=> Break:
+// Terminates the current loop, swithch or lable
+// Statements and Transfer progaram control
+// To the statement following the terminated statement.
+
+
+
+
+var l = 5, b = 4, r = 3;
+const Pi = 1.314;
+Area = "Circle";
+
+switch(Area)
+{
+    case "Rectangle" : 
+         console.log("The area of " + Area + " is: " + (l * b));
+         break;
+    case "Circle" : 
+        console.log("The area of " + Area + " is: " + (Pi * r**2));
+        break;
+    case "Square" :
+        console.log("The area of " + Area + " is: " + (l **2));
+        break;
+    default :
+        console.log("Please enter valid data.");      
+}
+
+
+                            => While Loop Statement:
+                            // The while loop statement creates a loop that èxecuates that specified
+                            // statement as long as the test condition evaluates to true.
+
+
+                            // Print 1,2,3,4,5,6,7,8,9,10
+
+
+                            var num = 1;
+                            //block scope
+                            while(num <= 10)
+                            {
+                                console.log(num);
+                                num ++;
+                            }
+                            // Print 10,9,8,7,6,5,4,3,2,1
+                            var num1 = 10;
+                            //block scope
+                            while(num1 >= 1)
+                            {
+                                console.log(num1);
+                                num1 --;
+                            }
+
+
+
+=> Do-While Loop
+
+var num = 20;
+do
+{   
+    debugger;
+    console.log("Num: " + num);
+    num ++;
+}while(num<=10);
+console.log("Execute Next code:")
+
+var num = 0;
+do
+{   
+    debugger;
+    console.log("Num: " + num);
+    num ++;
+}while(num<=10);
+
+
+
+
+
+    // What is Differece Between While and Do While Loop:
+    // In while loop first we check the condition if the conditon is ture
+    // then only we enter inside the loop and execute the code,
+    // But 
+    // In Do-while loop at the first time we donot check any condition
+    // and give the output after the first step then we will check the condition
+    
+
+=> For loop:
+//  Syntax
+//  for(inialiation; condition; update)
+//  {
+        // statement
+//  }
+
+
+// for(var num = 1;num<=20;num++){
+//     console.log("Num : " + num);
+// }
+
+// WAP to print a table for a given number (8)
+for(var num = 1;num<=10;num++){
+    var num1 = 9;// change the value of num1 which numbers tabel you want.
+ console.log(num1 + " * " + num + " = " + (num1*num));
+}
+
+
+
+                            // =>Functions in JavaScript:
+// A javascript function is a block of code designed to perform  a particular task.
+
+
+
+// => Function Definition:
+// Before we use a function we need to define it.
+
+// A function definition is aslo called function declaration or function statement.
+// Consists of the function keyword, followed by:
+
+// The name of the function .
+// A list of parameters to the function, enclosed in parenthesis and seperated by commas.
+// The JavaScript statements that define the function, enclosed in curly brackets , {....}
+
+
+// syntax
+    // function functionName(){
+    //     //statements
+    // }
+
+
+
+    // var a = 10;
+    // var b = 20;
+    // let sum = a + b;
+    // console.log(sum);
+
+console.log("Function: Definition ");
+    function sum1(){
+        var c = 20, d = 30;
+        var total = c + d;
+        console.log(total);
+    }
+    // console.log
+    
+    // =>Calling  Function:
+    // Defining a function doesnot execut it 
+    // A JavaScript function is executed whwn "something " invokes it (call it)
+   
+console.log("Function: Call");
+   
+    function sum(){
+        var c = 20, d = 30;
+        var total = c + d;
+        console.log(total);
+    }
+
+    sum();
+
+    // => Function Parameter:
+console.log("Function:Parameters");
+
+    function sum3(e, f){
+        var total = e + f;
+        console.log(total);
+    }
+
+    sum3();
+    sum3(20, 30);
+    sum3( 90, 10);
+
+// What is the difference between function Parameter v/s function Arguments?
+
+// => Functions Paramets are the names listed in the function definition.
+// => Functions Argumentsw are the real value passed in to the function.
+
+
+// => Why Functions?
+
+// You can reuse code: Define the code once, and use it many times
+// you can use the same code many times with different arguments to 
+// produce different results.
+
+// OR
+
+// A function is a group of reusable code which can be called anywhere
+// in your program,This eliminates the need of writing the same code
+// again and again,
+
+
+
+// => Function Expressions:
+// "Function expression simply means create a function and put it into the variable."
+
+console.log("Function: Expressions");
+
+function sum4(a,b){
+    var total = a+b;
+    console.log(total);
+}
+
+var myExpression = sum4(3,9);
+myExpression;
+
+
+// => Return Function:
+ // When JavaScript reaches to the return statement,the function 
+ // will stop executing.
+
+ // Function Often Compute a return value.
+//  The return value is returned back to the caller.
+console.log("Function: Return");
+
+function sum5(a,b)
+{
+    return total = a + b;
+}
+ var returnKey  =sum5(40,80);
+ console.log(returnKey);
+
+ // =>Anonymous Function:
+ // A Function Expression is similar to and has same the syntax as the 
+ // function declaration one can define "named" function expression (where the name
+//  of the expression might be used in the call stack for example. )
+// or "anonymous" function expressions.
+
+console.log("Anonymous Function:")
+
+var anyFun = function(a,b)
+{
+    return total = a+b;
+}
+console.log(anyFun(90,110));
+var summ = anyFun(45,5);
+console.log("The sum of two number is "+ anyFun(49,6));
+console.log("The sum of two number is "+ summ );
