@@ -1,0 +1,185 @@
+
+
+CSS stands for Cascading Style sheets.CSS is used to control the style of the web
+document in a simple and easy way. CSS to control the style and layout of multiple 
+web pages all at once. 
+
+CSS is created and maintened with a group of people within the W3C called the 
+css working group.
+
+#How to use CSS in web pages?
+There are three ways to use CSS in web pages:
+    1. In Line CSS
+    2. Internal CSS
+    3. External CSS
+
+
+  1. In-Line-CSS:
+    Here we write our css in line, means we use css in one line where we want to 
+    style and use style attribute for this, as:
+    <h1 style = "color: red; font-size: 30px;"> Namaste World !! </h1>
+
+    2. Internal-CSS
+    Here we write our css code in the same html page inside style tag as:
+    <style>
+    h1{
+        color: red;
+        font-size: 20px;
+    }
+    </style>
+
+    3. External-CSS
+    Here we write css code in another file and we should link the file with link tag
+     as 
+    <link rel="stylesheet" href="../CSS/style.css">
+    like that.
+
+
+    CSS ID and CLASS:
+    The ID selector is used to specify a style of a single unique element.
+      as: <h1 id = "idName"> Name </h1>
+
+
+    The CLASS selector is used to specify a style of a group elements.
+      as: 
+      <h1 class = "className"> Name </h1>
+      <h1 class = "className"> Name </h1>
+      <h1 class = "className"> Name </h1>
+      <h1 class = "className"> Name </h1>
+
+
+    we access class by dot(.) symbol where as id by hash(#) symbol.
+    as: .className{
+      property: value;
+    }
+
+      #idName{
+        property:value;
+      }
+      we can also use multiple class in one tag by giving space between each class
+      as: <h1 class = "class1 class2"> Name </h1>
+
+      => Background property in CSS
+      background-color: colorName; to set background color 
+      background-image: url('image-link') to set image in background
+      In background image property if there is small image that the size of the content
+      our image is repeat in horizontal and vertical, To remove this we use another property
+      called 
+      -> background-repeat : no-repeat;
+      if we want repeat in horizontal only then:
+      -> background-repeat : repeat-x;
+      if we want repeat in vertical only then:
+      -> background-repeat : repeat-y;
+
+      To set our image in Center with full size in the content we use another property
+      -> background-size: 100% 100%;
+       
+
+      To control the scrolling of the image we use another property called
+      -> background-attachment: fixed;
+
+      => Color property:
+      In color property we can set value in 4 types 
+      1. Direct with name as red, green, blue,etc
+      2. Hexa code : #00ffff;
+      These hexa values are started from 0 - 15 and after 9 we use a, b, c ,d,e, f for 10,11,12,13,14,15
+      3. rgb(255, 240,200)
+         rgba(255, 240,200, 1)
+      This is red, green ,blue and the a is opacity/transparency of the color.
+      value of the red, green,blue is from 0 - 255 and the opacity is 0-1
+      4. hsl(0,100%, 50%)
+         hsl(0,100%, 50%,.5)
+      This is heu saturation and lightness and if we add a : is the opacity/transparency of the color
+      > the value of heu(h) is from 0-360:
+      > the value of saturation(s) is from 0% - 100%:
+      > the value of lightness(l) is from 0% - 100%:
+      > the value of opacity(a) is from 0 - 1:
+
+
+      => Universal selector(*)
+       This is universal selector(*): using this selector
+       we can apply a property for all over the document.
+       *{
+         margin: 0;
+         padding : 0;
+       }
+
+       => Fonts in CSS
+
+       The font-family property is used to change the face of the font.
+
+       The font-style property is used to make a font italic,bold.
+
+       The font-varient property is used to make a small-caps effect.
+
+       The font-size property is used to change the size of the font.
+
+      The font-weight property is used to specify the weight of the font.
+
+      => Text CSS 
+
+      -> color: red;
+      -> letter-spacing : 1px;// to use space between lettrs as: w o r d:
+      -> word-spacing : 2px ; // hello  world ;
+      -> direction : ltr or rtl // the direction is use to write a letter as left to write and right to left.
+      -> text-indent: 10 px; // this is used in when we use a paragarph to give a small space as; when 
+      writing application we use to the headmaster and there is a space soo that is occur by text-indent property.
+      -> text-align: center | left | right; 
+      -> text-transform: uppercase | lowercase | capatilize etc
+       
+      => Link in CSS
+      The : link signfies the unvisited link.
+       the : visited signifies the visit link.
+       the : hover signifies an element that currently has the users mouse pointer hover on it,
+       the : active signifies an element on which the user is currently clicking ,
+
+       as: 
+     <a href="https://www.fonts.google.com/">fonts</a> This is the link
+          /* unvisited */
+      a:link{
+          color: yellow;
+      }
+      /* :visited */
+      a:visited{
+              color: orangered;
+          }
+          /* mouse on hover  */
+      a:hover{
+              color: blue;}
+              /* selected  */
+      a:active{
+          color: green;
+      }
+
+      => Border in CSS
+      The border property allows you to specify how the border of the box 
+      representing an element should look.
+      The border-color: specify the color of hte border.
+      The border-style specify wheather a border should be solid, dashed line, double line or any other 
+      possible value,
+      The border-width specify the width of the border.
+      The border-radious specify the roundness of the border.
+
+      => List in CSS
+      Two types of list are present in css namely 
+      orderd list
+      <ol>
+        <li> </li> 
+      </ol>
+      list style type disk | square | circle
+      unorderd list
+      <ul>
+        <li> </li> 
+      </ul>
+      list style type uppercase/lowercse a/A | 1 | i/I 
+      to remove bullet points or numbering 
+      use list-style: none;
+
+
+      => Box MOdel in CSS
+      -> content: the content of the box where text/images are appeare.
+      ->padding : clears the area around the content. the padding is transparent.
+      -> border: that goes abound the padding and content
+      -> margin: clears an area outside the border.the margin is transparent.
+      
+

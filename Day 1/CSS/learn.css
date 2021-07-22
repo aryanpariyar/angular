@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
+
+*{
+    margin: 0;
+    padding : 0;
+  }
+h1{
+    /* color: blue; */
+    text-align: center;
+    margin-top: 100px;
+
+}
+.blue{
+    color: blue;
+}
+#red{
+    color: red;
+}
+.imgBg{
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+    background-image: url('../IMAGES/4.png') ;
+    /* background-size: 100% 100%; */
+    /* background-repeat: repeat-y; */
+    background-attachment: fixed;
+
+    
+
+}
+.imgBg1{
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+    background-image: url('../IMAGES/5.png') ;
+    /* background-size: 100% 100%; */
+    /* background-repeat: repeat-y; */
+    background-attachment: fixed;
+}
+
+#cssfonts{
+    font-family: 'Zen Tokyo Zoo', cursive;
+    /* font-size: large; */
+    font-weight: 600;
+}
+/* unvisited */
+a:link{
+    color: yellow;
+}
+/* :visited */
+a:visited{
+        color: orangered;
+    }
+    /* mouse on hover  */
+a:hover{
+        color: blue;}
+        /* selected  */
+a:active{
+    color: green;
+}
+.box{
+    margin-left: 500px;
+    height: 200px;
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    width: 300px;
+    border: 50px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+.boxmodel{
+    height: 300px;
+    width: 600px;
+    background-color: blue;
+    padding: 100px;
+    color: white;
+    font-size: 30px;
+}
+input{
+    margin-left: 10px;
+    /* margin: 50px; */
+    padding: 15px;
+}
