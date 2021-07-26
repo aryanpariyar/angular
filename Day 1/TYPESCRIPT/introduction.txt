@@ -1,0 +1,113 @@
+ => What is typeScript ?
+  TypeScript in not another language ,typeScript is the super set of JavaScript , that
+  means any valid code of JavaScript is also valid for typeScript but typeScript has additional 
+  features that do not exits in JavaScript supported by the most browsers out there.
+  For eg: 
+            We have 
+                        * Strong typing
+                        * Object Oriented features missed in JavaScript.
+                        * Compile-time Error
+                        * Great  Tooling
+
+      => How to install typeScript in your machine?
+      To install typeScript in our machine 
+        ->: npm install -g typeScript
+
+        -g is for gloablly if we want we can only install for the running projet withour -g .
+
+
+    To check the version of typeScript Compile 
+    we use : 
+               -> tsc -version : 
+
+    To run the typeScript code we need to transpile to JavaScript file for this we use
+    ->tsc <nameoffile>
+********************************************************************************
+
+
+  => Variable Declartion in TypeScript:
+
+    In typeScript we use 
+
+     var and let for the declaration of variable:
+var Namee = "name of the person";
+let naame = "name of the person2";
+    function details(){
+        var myName = "Aryan";
+        
+        if(4>5){
+                console.log(myName);  
+        }
+        else{
+            console.log(myLastName);
+        }
+        
+        var myLastName = "Pariyar";
+    }
+
+     when we use var keyword for accessing the varible it can be access from anywhere but let
+     is not accessing from anywhere for accessing the let we have a specfice block inside that block the 
+    let will work otherwise it will through the error to us.
+
+********************************************************************************
+
+                      => Types in TypeScript:
+
+         let a: number; // this is number type
+         let b: boolean;  // this is boolean type
+         let c: string;     // this is string type
+         let d: any;        // this is any type
+         let e: number[] = [1,3,4,5,6,7]; // this is array type
+         let f: any[] = [1,'name', true, 3.4];  // this is also a any array type;
+
+
+          Enum type;
+
+         const colorRed = 0;
+         const colorGreen = 1;
+         const colorBlue = 2;
+
+         enum Color { Red = 0,Green = 1,Blue = 2 };
+         let BackgroundColor = Color.Red;
+
+         
+********************************************************************************
+    
+    => Type Insertion in TypeScript  
+
+
+
+    // This is the one way of insertation. 
+    // let message = "hello";
+    // let endWithO = message.endsWith('o');
+// Here if we set this then when we type message dot(.) then we get all the function 
+// the are useful for the string type.
+    // Another way
+
+
+    // But if we declare and assign like this then we can't get any suggection:
+    let messaage;
+    messaage = 'hello';
+    let endWithO = messaage.endsWith('o');
+
+
+        // Then we have to use string in < string > like this 
+        let messagee;
+    messagee = 'hello how are you.';
+    let endWithU = (<string>messagee).endsWith('u');
+    // or  using like this (message as string )
+    let message;
+message = 'hello how are you dear.';
+let endWithR = (message as string).endsWith('r');
+
+
+// this means if we declare the correect type of the variable at first then we can have all the suggestion regars that.
+
+
+
+************************************************************************************
+
+=> Arrow Function in TypeScript:
+
+
+
