@@ -73,7 +73,7 @@ let naame = "name of the person2";
          
 ********************************************************************************
     
-    => Type Insertion in TypeScript  
+    =>Type Assertions in TypeScript  
 
 
 
@@ -97,8 +97,8 @@ let naame = "name of the person2";
     let endWithU = (<string>messagee).endsWith('u');
     // or  using like this (message as string )
     let message;
-message = 'hello how are you dear.';
-let endWithR = (message as string).endsWith('r');
+    message = 'hello how are you dear.';
+    let endWithR = (message as string).endsWith('r');
 
 
 // this means if we declare the correect type of the variable at first then we can have all the suggestion regars that.
@@ -110,4 +110,573 @@ let endWithR = (message as string).endsWith('r');
 => Arrow Function in TypeScript:
 
 
+   
 
+     The noraml function in js is like this :
+     function sum(a,b){
+         let sum = a+b;
+         return sum;
+     }
+     sum(5,10);
+
+      but in Arrow Function we use like this:
+      this is the same as fat arrow function in es6;
+
+    const summ = (a,b) => a+b;
+    summ(4,6);
+
+***********************************************************************************************
+    => 8- Interfaces in TypeScript // Custom Types in TypeScript:
+
+    Lets Draw the fucntion :
+    let drawPoint = (x,y) => {
+        // ...
+    }
+
+    Here we don't have any issue because we just have 2 parameters.
+    What if we have many parameters like 10 and more then this is difficult for us to 
+    configure this.
+    To configure this types of problem we can use group of parameters means we can 
+    encapuate the parametersand make an Object, insted of passing single single parameters
+    we can pass Point Object here as:
+      Lets Draw the fucntion :
+    let drawPoint = (point) => {
+        // ...
+    }
+    NOw we can simple call the function as:
+    drawPoint({
+        x:1,
+        y:2
+    })
+    Thsi is much cleaner synatx.
+
+    The point can hold as many as parameters in it,
+    However here is also a problem occurs 
+     drawPoint({
+        name:'Aryan',
+        y:
+    })
+    We should have only and only x and y parameters should execute here not any other .
+    Here if we put value of x as string the code should give compile time error to us 
+    but there is no any error 
+    NO to slove this problem we have to solutions 
+    The first is inline  annotation:
+     let drawPoint = (point :{x:number,y:number}) => {
+        // ...
+    }
+
+    Here we use number as x and y and inside in curley baraces because indicatig the Object.
+    This why we are annotated with custom type as number
+
+    In works fine for simple cases but 
+    here we includes variable and there might me another point function we don't want
+    repeat this process again and again.
+
+    IN those case the better approace is use Interfaces 
+
+    NOw how to define it :
+
+    as: 
+        interface Point {
+            x: number,
+            y: number
+        }
+        and now we can use it simply as 
+         let drawPoint = (point :Point) => {
+        // ...
+    }
+     drawPoint({
+        x:1,
+        y:2
+    })
+    This is much cleaner and we can reuse it in multiple times.Just it no any naming 
+    convention is used here because we are introducing the custom type and here we use 
+    first letter as Capital in an interface.
+
+********************************************************************************************************************************
+    => Class in TypeScript:
+            interface Point {
+                        x: number,
+                        y: number
+                    }
+                    and now we can use it simply as 
+                    let drawPoint = (point :Point) => {
+                    // ...
+                }
+                drawPoint({
+                    x:1,
+                    y:2
+                })
+        Here we use Interfaces to define point of a shape Object.But here is a problem with this 
+        implementation , in Object Oriented programming language we have a concept called cohesion
+        Cohesion: This means `things related should be part of an one unit, it goes together, this is what 
+        we called Cohesion. 
+
+        But here on the top we have interface which define the point of a shape Object and below that 
+        we have stand alone function and 
+        This is where we have voileted the principle of cohesion.
+        So the concept of drawPoint is highly related with the structure of the point, it
+        should not be a seperate function and if we are working on a utility function and the chances 
+        are hightly we should make another function  as:
+        let getDistance = (pointA: Point, pointB: Point) => {
+            // ....
+        }
+
+        Again we have voileted the cohesion principle.We have two function hanging there seperate from the point object.
+        Since these concept are highly related they should be part of an one unit
+
+        In Object Oriented language we called that unit => Class
+
+        Class : Groups Variables (Properties) and functions (methods)  that are highly related.
+
+        In above implementation we cannot  move these function inside interface because inter are
+        used for decoration they cannot use for implementation. 
+
+        In another way we cannot have any algorithem to calculated drawPoint and getDistance inside interface.
+
+        But we can declare a fucntion which have no any parameters and no any return type . IN this function we can pass point but 
+        there is no need of that because like x and y draw can also have the power of use point directley.
+    as:
+        interface Point {
+                        x: number,
+                        y: number,
+                        draw : () => void 
+                    }
+            To use cohesion principle we need to ue class keyword instead of interface
+           and now we can make a implementation of function inside class and change , with ;  .
+
+             class Point {
+                        x: number;
+                        y: number;
+                        draw(){
+                            // ...
+                        }
+                        getDistance(another: Point){
+                            // ...
+                        }
+                    }
+    Now by this(class) we can have everything about point is in one Class.
+    as x , y , and two fucntion draw() and getDistance() in 
+
+    Object Oriented programming we called these variable as a fields and fucntion as method.
+     here we don't want any other fucntion and variable outside from this class.
+     NOw Here is the Point Class 
+                                 x: number;
+                        y: number;
+                        draw(){
+                            // ...
+                        }
+                        getDistance(another: Point){
+                            // ...
+                        }
+                    }
+
+********************************************************************************************************************************
+
+
+=> Object in TypeScript:
+         Point Class 
+                                 x: number;
+                        y: number;
+                        draw(){
+                            // ...
+                        }
+                        getDistance(another: Point){
+                            // ...
+                        }
+                    }
+
+
+        Here is our Point Class now 
+        lets declare a variable of this type.
+         let point = new Point();
+  
+        // Here if we want to use x dnd y in draw we should use this keyword as this.x 
+
+         class Point {
+            x: number;
+            y: number;
+            draw(){
+                console.log('X: ' + this.x, 'Y: ' + this.y);
+            }
+            getDistance(another: Point){
+                // ...
+            }
+        }
+        now for accessing the object 
+         
+         let point: Point = new Point();
+
+         but to make the code bit cleaner we use 
+        => let point = new Point();
+             point.x = 1;
+             point.y = 2;
+             point.draw();
+
+        Here Some important Point is that : 
+         The capital Point is the class and the small point is an object
+     an object is an instance of a Class
+
+**********************************************************************************************************************
+
+=> Constructor in TypeScript:
+
+  class Point {
+            x: number;
+            y: number;
+            draw(){
+                console.log('X: ' + this.x, 'Y: ' + this.y);
+            }
+           
+        }
+    
+       let point = new Point();
+             point.x = 1;
+             point.y = 2;
+             point.draw();
+
+        Here we have at top Point class and and below initialixe a point object .
+
+        This code is little bit verbals because we have 3 lines to create object and put it on a valid state.
+        and if this object have another property then we do again for that property  and may be few more as:
+         let point = new Point();
+             point.x = 1;
+             point.y = 2;
+             point.z = 3;
+             // ..
+             /// '..
+                point.draw();
+        Is that look cleaner exactly not so in object Oriented programming we have the concept of Constructor.
+
+        Constructor : Every class can have a Constructor which is directley call when we make instance of that class.
+        let see how it works: 
+
+        class Point {
+            x: number;
+            y: number;
+            draw(){
+                console.log('X: ' + this.x, 'Y: ' + this.y);
+            }
+
+            constructor(x: number, y: number){
+                this.x = x;
+                this.y = y;
+            }
+           
+        }
+    
+       let point = new Point();=> error
+           point.x = 1;
+           point.y = 2;
+             point.draw();
+
+    Here in typeScript we should give the parameters to the object to make it working because in typeScript  we have only one 
+    constructor so 
+
+     class Point {
+            x: number;
+            y: number;
+            draw(){
+                console.log('X: ' + this.x, 'Y: ' + this.y);
+            }
+
+            constructor(x: number, y: number){
+                this.x = x;
+                this.y = y;
+            }
+           
+        }
+    
+       let point = new Point(1,2);=> 
+           point.x = 1;
+           point.y = 2;
+             point.draw();
+             and here we dont want the value of x line and y line so by romoving these we get.
+
+                let point = new Point(1,2);=> 
+                point.draw();
+
+                But what if we dont want any parameters in there in object.
+                soo we should make these parameters option
+                to make optional to these parameters we should add ? sign next to the constructor parameters. as:
+
+           class Point {
+            x: number;
+            y: number;
+
+            constructor(x?: number, y?: number){
+                this.x = x;
+                this.y = y;
+            }
+            draw(){
+                console.log('X: ' + this.x, 'Y: ' + this.y);
+            }
+           
+        }
+    
+       let point = new Point(); 
+          
+             point.draw();       
+
+
+***************************************************************************************************************************
+
+
+
+//  => Access MOdifiers in Typescript:
+    
+           class Point {
+            x: number;
+            y: number;
+
+            constructor(x?: number, y?: number){
+                this.x = x;
+                this.y = y;
+            }
+            draw(){
+                console.log('X: ' + this.x, 'Y: ' + this.y);
+            }
+           
+        }
+    
+       let point = new Point(1,2); 
+          
+             point.draw(); 
+
+    Here we have point object with the initial cordinates. what if in our program when we initialize a value there 
+    should not change the value of x and y. 
+
+    here if we want to change the value of x i can do this easy as;
+     let point = new Point(1,2); 
+          point.x = 3;
+             point.draw(); 
+
+             HOw to avoid this in some program we need this features 
+
+             In object Oriented programming we have something for this called 
+             Access Modifieres: 
+             An access modifier is basicaly a keyword which we can apply members of class to avoid the access of these members outside of the class.
+
+             In Typescript we have 3 types of access modifiers 
+                1. Public 
+                2. Private 
+                3. Protected
+            Public and Private are the most common in use and in Typescript by default 
+            all the members are Public 
+
+            NOW to use these access modifier we use these keyword after the fields as; 
+            Private x : number;
+            Private y : number;
+
+            eg: 
+
+             class Point {
+           Private x: number;
+           Private y: number;
+
+            constructor(x?: number, y?: number){
+                this.x = x;
+                this.y = y;
+            }
+            draw(){
+                console.log('X: ' + this.x, 'Y: ' + this.y);
+            }
+           
+        }
+    
+       let point = new Point(1,2); 
+          
+             point.draw(); 
+
+             now we cannot access the x and y outside of the class because these are the Private 
+              fields.
+              We can use these keyword in fields and method of the class,
+
+***********************************************************************************
+
+
+    
+            //  class Point {
+            //     private x: number;
+            //     private y: number;
+     
+            //      constructor(x?: number, y?: number){
+            //          this.x = x;
+            //          this.y = y;
+            //      }
+            //      draw(){
+            //          console.log('X: ' + this.x, 'Y: ' + this.y);
+            //      }
+                
+            //  }
+         
+            // let point = new Point(1,2); 
+               
+               point.draw(); 
+
+         Here we have construcotr in our class 
+         in constructor we have initial as : 
+         this.x  = x; and 
+         this.y = y ; 
+         this look little but anoying that same name is assignig the in same in 
+         typeScript we have 
+     much better written code as : 
+
+     we can delete these private keyword fields and put privite, public or protected keyword before the parameters in constructors.
+     and the awesome feature is that we dont have to use this.x = x; cox typesctipe auto assign this for as in the same parameter,
+    class Point {
+      
+
+         constructor(public x?: number,private y?: number){
+            
+         }
+         draw(){
+             console.log('X: ' + this.x, 'Y: ' + this.y);
+         }
+        
+     }
+ 
+    let point = new Point(1,2); 
+       point.x;
+          point.draw(); 
+
+**************************************************************************************************************************
+
+=> Properties in Typescript:
+
+  // => Properties :
+            // class Point {
+
+            // constructor(private x?: number,private y?: number){
+                        
+            //       }
+            // draw(){
+            //     console.log('X: ' + this.x, 'Y: ' + this.y);
+            //       }
+
+            // }
+
+            // let point = new Point(1,2); 
+      
+            // point.draw()
+
+    // Now this implementation has little problem we can access the private fields. such as x and y
+            //  The simple solutin of this is define a method for this privite class because
+             // we have prower of access all the members  in class and we cannot access these from the outside of the clas
+             // so: 
+
+            //  class Point {
+
+            //     constructor(private x?: number,private y?: number){
+                            
+            //           }
+            //     draw(){
+            //         console.log('X: ' + this.x, 'Y: ' + this.y);
+            //           }
+    
+            //           getX(){
+            //               return this.x;
+            //           }
+            //     }
+    
+            //     let point = new Point(1,2); 
+            //     let x = point.getX();
+          
+            //     point.draw()
+
+    // And  what if we have to pass the value in x then we have to make another method in class as:
+
+    // class Point {
+
+    //     constructor(private x?: number,private y?: number){
+                    
+    //           }
+    //     draw(){
+    //         console.log('X: ' + this.x, 'Y: ' + this.y);
+    //           }
+
+    //     getX(){
+    //           return this.x;
+    //           }
+    //     setX(value){
+    //         if(value<0){
+    //             console.log('Please Enter valid value');
+    //         }
+    //         else{
+    //             this.x = value;
+    //         }
+    //     }
+
+
+    //         }
+
+    //     let point = new Point(1,2); 
+    //     let x = point.getX();
+    //     point.setX(10);
+  
+    //     point.draw()
+    // if our program have this type of requirement simple we can use properties 
+// IN method we can easily use these like field .
+    // such as  
+
+
+    // class Point {
+
+    //     constructor(private x?: number,private y?: number){
+                    
+    //           }
+    //     draw(){
+    //         console.log('X: ' + this.x, 'Y: ' + this.y);
+    //           }
+
+    //     get X(){ // method by spacing between 
+    //           return this.x;
+    //           }
+    //     set X(value){ // method by spacing between 
+    //         if(value<0){
+    //             console.log('Please Enter valid value');
+    //         }
+    //         else{
+    //             this.x = value;
+    //         }
+    //     }
+
+
+        //     }
+
+        // let point = new Point(1,2); 
+        // let x = point.X;
+        // point.X = (10);
+        // point.draw()
+
+        // IN pypescript we use camel case for the property but here we have not because of the field soo 
+        // by achiving that we can simple make underscore filed as ;
+        class Point {
+
+            constructor(private _x?: number,private _y?: number){
+                        
+                  }
+            draw(){
+                console.log('X: ' + this.x, 'Y: ' + this.y);
+                  }
+    
+            get x(){ // method by spacing between 
+                  return this.x;
+                  }
+            set x(value){ // method by spacing between 
+                if(value<0){
+                    console.log('Please Enter valid value');
+                }
+                else{
+                    this.x = value;
+                }
+            }
+    
+    
+                }
+    
+            let point = new Point(1,2); 
+            let x = point.x;
+            point.x = (10);
+            point.draw()
+    
