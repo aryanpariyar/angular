@@ -1,0 +1,109 @@
+
+    => Routing in Angular:
+        In this module we have bunch of derictives and services that we use for implemtnting navagation 
+        in our application, 
+                        There are three steps to implementing navagation 
+                            * Configure the routes : In our application, each routes determines what component shouls
+                            be visible when the user navigates to a certain url ,so routes is a mapping of the path to a component.
+                            * Add a Router Outlet: That is where we display the corresponding components when a given routes becomes 
+                            active .
+                            * Add links 
+
+                            To Configure route with angular CLI ues the command : 
+                                ->ng generate module app-routing --flat --module=app
+
+                            After hitting this command we will get one file 
+                            inside src - inside app there is a file named app-routing.module.ts 
+                    Now open this and there is some basic code : 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+
+
+@NgModule({
+  declarations: [],
+  imports: [
+    CommonModule
+  ]
+})
+export class AppRoutingModule { }
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+And Replace it with : 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HeroesComponent } from './heroes/heroes.component';
+
+const routes: Routes = [
+  { path: 'heroes', component: HeroesComponent }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+const routes: Routes = [
+  { path: 'heroes', component: HeroesComponent }
+];
+
+
+Here we have to import that component which we want to use.
+ like above HeroesComponent 
+ and the main part is that inside routes : Routes 
+    change the path where you want to redirect that file and corresponding component also.
+    and other will be automaticall updated in this file.
+
+    if we want to redirect all the route which are not in our website then they should be redirected in 
+    some particulr component the the route of this is as : 
+    path : '**', component : AnyComponent 
+
+    Also if we want to pass parameters inside that path then use as : 
+     { path: 'heroes/:heroid', component: HeroesComponent }
+
+***********************************************************************************
+
+After that we need to use , Router Outlet (in the app.component.html): That is where we display the corresponding components 
+when a given routes becomes active .
+For this we use 
+    <h1>{{title}}</h1>
+<router-outlet></router-outlet> => this is the required outlets we have to use.
+<app-messages></app-messages>
+
+******************************************************************************************
+
+Now finally we have to add links to the required path as the use or routeLink as: 
+
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/heroes">Heroes</a> -> thsi is the required code for this.
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>
+
+And if there is parameters in the links we should use dynamic url as: 
+When we are dealing with route parameters instead of using routerLink attribute we should use the property binding 
+syntax and instead of property binding string  we should bind it with expression as array, first element of that array 
+is path after that we add all the parameters as: 
+
+<a [routerLink]="['/heroes', heroes.id]">Heroes</a> => this is required code.
+
+This is all basic of the routing: 
+********************************************************************************************
+
+When we use the bootstrap nav bar or other we have a problem which is occur by the use of the 
+css class active because when we use this eveytime this will remain active where as if we are not there also
+
+so to taccle this problem we use : 
+    -> routerLinkActive= "active"
+
+    routerLinkActive instead of routerLink and inside the string we use css class.
