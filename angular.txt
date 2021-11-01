@@ -1,0 +1,81 @@
+=> Data Binding in Angular App:
+
+        What is data binding ?
+        -> In simple words data-binding is the communication, communication between 
+        Angular component and Angular view, here component means typescripts files and 
+        view are the templete/html files.
+
+        In typescripts file we write logics, make some methods and do some calculations also
+        and the result is shown to the user and we can only show ourcode  and logics through with 
+        views means templetes/html files ,
+
+        So that we need to have communication between these and show our typescripts files logics in view.
+        And here the role of data-binding came.
+
+        There are 2 types of data-binding.
+                1. One way data binding.
+                2. Two way data binding.
+        
+        * One way data-binding:
+        When we want to bind the data from component file to view files then we use one way data-binding.
+                By the help of 
+                        * String Interpolations {{ data }} :
+                        * Property Binding [property] = 'data'
+        
+        When we want to bind data from view / html file to component there is also we use One way data binding.
+                By the help of 
+                        * Event Binding (event) = "expression"
+
+        * Two Way data-binding: 
+        Here the data will bind in both side at the same time as : 
+        component -> view &
+        view -> component
+                By the help of 
+                        * [(ngModule)] = "data"
+
+
+        => Interpolation || String Interpolation in Angular:
+        We always use Interpolation in String only and use in view as : 
+        To use variables we have to declare that in typescripts file first.
+        and inside double curlly bracket use this variables name in view.
+
+        In view we use inside that curlly bracket we can use all the javaScript expression ,  variables and inbuilt property and inbuilt method and if we made any
+        custom method then also we can use that in their.
+
+
+        => Property Binding in Angular:
+        In Property Binding : Here also we communicates with the data , the 
+        syntax of this is we use the html attributes inside the square bracket.
+        as 
+        <input type="text" [value]="variableName">
+
+        Now What is the difference between Interpolation and Property binding:
+        The main difference between Interpolation and property binding is : 
+        in Interpolation String we can only use String but in property binding we can use non-String value also, like: 
+        boolean, etc
+
+
+        where is the main case of use property binding only: 
+        there are some case where we have only one option to use : property binding 
+        In html attribute disabled there we can use String values if we use this do cannot change value staticlly or dynamically.
+        And another attribute is hidden 
+        So we have to use property binding their. 
+
+        <input type="text" disabled="false"  name = "" [value]="variableName"> // this is not working 
+        <input type="text" [disabled] = "false" name = "" [value]="variableName"> // this code is working
+        <input type="text" hidden="false"  name = "" [value]="variableName"> // this is not working 
+        <input type="text" [hidden] = "false" name = "" [value]="variableName"> // this code is working
+
+
+
+
+
+=> Services in Angular
+
+To use Services in Angular app we need to make a Service file inside the app folder as 
+        ->name.service.ts
+        and write some code inside or simple use Angular CLI to generate service component as: 
+        -> ng generate service serviceName
+
+
+        
